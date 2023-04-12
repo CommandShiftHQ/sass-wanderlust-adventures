@@ -1,0 +1,22 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
+.navigation {
+  &__link {
+    color: functions.color('white');
+    margin-right: 16px;
+    text-align: center;
+    @include mixins.text-large;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--small {
+    .navigation__link {
+      @include mixins.text-base;
+      color: functions.color('white');
+    }
+  }
+}

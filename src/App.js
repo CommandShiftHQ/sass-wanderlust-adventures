@@ -11,26 +11,23 @@ function App() {
   return (
     <>
       {/* HEADER */}
-      <header>
-        <div>
-          <span>
+      <header className='header'>
+        <div className='header__logo'>
+          <span className='logo'>
             Wanderlust <Globe /> Adventures
           </span>
         </div>
-        <nav>
-          <a>Destinations</a>
-          <a>Shop</a>
-          <a>Stories</a>
+        <nav className='navigation'>
+          <a className='navigation__link'>Destinations</a>
+          <a className='navigation__link'>Shop</a>
+          <a className='navigation__link'>Stories</a>
         </nav>
       </header>
       <main>
         {/* HERO */}
         <section>
           <div></div>
-          <img
-            src='./images/hero.jpg'
-            alt='Scenic Canadian Landscape'
-          />
+          <img src='./images/hero.jpg' alt='Scenic Canadian Landscape' />
         </section>
         {/* OVERVIEW SECTION */}
         <section>
@@ -45,9 +42,7 @@ function App() {
             </p>
           </div>
           <div>
-            <h2>
-              Start planning your trip
-            </h2>
+            <h2>Start planning your trip</h2>
             <div>
               <div>
                 <div>
@@ -72,17 +67,16 @@ function App() {
         </section>
         <hr />
         {/* FEATURED CARDS */}
-        <section >
+        <section>
           <h2>01 / Top Sights & Places</h2>
           <h3>
-            Unmissable <span>sights</span> for
-            your itinerary
+            Unmissable <span>sights</span> for your itinerary
           </h3>
           <div>
             {topSightsData.map((topSight) => (
               <div>
                 <img src={topSight.image.src} alt={topSight.image.alt} />
-                <div >
+                <div>
                   <h5>{topSight.title}</h5>
                   <p>{topSight.subtitle}</p>
                 </div>
@@ -90,33 +84,26 @@ function App() {
             ))}
           </div>
           <div>
-            <a href=''>
-              Discover More Places
-            </a>
+            <a href=''>Discover More Places</a>
           </div>
         </section>
         {/* CTA BANNER */}
         <section>
           <h2>02 / Guidebooks</h2>
           <div>
-            <h3>
-              Purchase our award-winning guidebooks
-            </h3>
+            <h3>Purchase our award-winning guidebooks</h3>
             <p>
               Get to the heart of Canada with one of our in-depth, award-winning
               guidebooks, covering maps, itineraries, and expert guidance.
             </p>
-            <a href=''>
-              Shop Our Guidebooks
-            </a>
+            <a href=''>Shop Our Guidebooks</a>
           </div>
         </section>
         {/* FEATURED ARTICLES */}
         <section>
           <h2>03 / Articles</h2>
           <h3>
-            Latest <span>stories</span> from
-            Canada
+            Latest <span>stories</span> from Canada
           </h3>
           <div>
             {blogCardData.map((blogCard) => (
@@ -134,23 +121,21 @@ function App() {
             ))}
           </div>
           <div>
-            <a href=''>
-              Discover More Places
-            </a>
+            <a href=''>Discover More Places</a>
           </div>
         </section>
       </main>
       {/* FOOTER */}
-      <footer>
-        <div>
-          <span>
+      <footer className='footer'>
+        <div className='footer__logo'>
+          <span className='logo logo--small'>
             Wanderlust <Globe /> Adventures
           </span>
         </div>
-        <nav>
-          <a>About Us</a>
-          <a>Privacy Policy</a>
-          <a>Contact Us</a>
+        <nav className='navigation navigation--small'>
+          <a className='navigation__link'>About Us</a>
+          <a className='navigation__link'>Privacy Policy</a>
+          <a className='navigation__link'>Contact Us</a>
         </nav>
       </footer>
     </>

@@ -1,0 +1,10 @@
+@use '../utilities/functions';
+
+footer {
+  background: functions.color('black');
+  color: functions.color('white');
+  display: flex;
+  justify-content: space-between;
+  padding: functions.spacing('md');
+  align-items: center;
+}

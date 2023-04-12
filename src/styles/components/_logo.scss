@@ -1,0 +1,26 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+.logo {
+  @include mixins.h5;
+  font-weight: functions.font-weight('black');
+  color: functions.color('white');
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--small {
+    @include mixins.text-large;
+    color: functions.color('white');
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

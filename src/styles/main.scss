@@ -5,6 +5,8 @@
 @use './base/reset';
 @use './base/base';
 
-// layout
+@use './layout/header';
+@use './layout/navigation';
+@use './layout/footer';
 
-// components
+@use './components/logo';

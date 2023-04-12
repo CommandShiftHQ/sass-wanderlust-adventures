@@ -1,0 +1,100 @@
+$color-jet: #333333;
+$color-lapis-lazuli: #005e90;
+$color-pale-azure: #93d7fc;
+$color-spring-green: #087b5b;
+$color-celeste: #baeddf;
+$color-cosmic-latte: #f7f3e3;
+$color-crayola: #ff7487;
+$color-misty-rose: #ffdfe4;
+$color-white: #fefefe;
+$color-black: #222222;
+
+// TODO
+$colors: (
+  'background': $color-white,
+  'foreground': $color-jet,
+  'primary-foreground': $color-lapis-lazuli,
+  'primary-background': $color-pale-azure,
+  'secondary-foreground': $color-crayola,
+  'secondary-background': $color-misty-rose,
+  'accent-foreground': $color-spring-green,
+  'accent-background': $color-celeste,
+  'white': $color-white,
+  'black': $color-black,
+);
+
+$font-family: 'Nunito', sans-serif;
+
+$font-weight: (
+  'light': 300,
+  'normal': 400,
+  'bold': 500,
+  'black': 700,
+);
+
+$base-spacing: 16px;
+
+$spacing: (
+  'xs': $base-spacing * 0.5,
+  'sm': $base-spacing,
+  'md': $base-spacing * 2,
+  'lg': $base-spacing * 3,
+  'xl': $base-spacing * 5,
+  '2xl': $base-spacing * 8,
+);
+
+$radius: (
+  'xs': 4px,
+  'sm': 8px,
+  'md': 16px,
+  'lg': 32px,
+);
+
+$max-width: (
+  'sm': 512px,
+  'md': 768px,
+  'lg': 1280px,
+);
+
+$breakpoints: (
+  'medium': (
+    min-width: 768px,
+  ),
+  'large': (
+    min-width: 1024px,
+  ),
+  'xlarge': (
+    min-width: 1280px,
+  ),
+);
+
+$gradient: (
+  'fadeDown':
+    linear-gradient(
+      0deg,
+      rgba(51, 51, 51, 0.75) 0%,
+      rgba(51, 51, 51, 0.65) 20%,
+      rgba(51, 51, 51, 0) 60%
+    ),
+  'fadeUp':
+    linear-gradient(
+      180deg,
+      rgba(51, 51, 51, 0.75) 0%,
+      rgba(51, 51, 51, 0.65) 20%,
+      rgba(51, 51, 51, 0) 60%
+    ),
+  'fadeLeft':
+    linear-gradient(
+      90deg,
+      rgba(51, 51, 51, 0.75) 0%,
+      rgba(51, 51, 51, 0.65) 20%,
+      rgba(51, 51, 51, 0) 60%
+    ),
+  'fadeRight':
+    linear-gradient(
+      270deg,
+      rgba(51, 51, 51, 0.75) 0%,
+      rgba(51, 51, 51, 0.65) 20%,
+      rgba(51, 51, 51, 0) 60%
+    ),
+);

@@ -1,0 +1,56 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+body {
+  @include mixins.text-base;
+  background: functions.color('background');
+}
+
+h1 {
+  @include mixins.h1;
+}
+
+h2 {
+  @include mixins.h2;
+}
+
+h3 {
+  @include mixins.h3;
+}
+
+h4 {
+  @include mixins.h4;
+}
+
+h5 {
+  @include mixins.h5;
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 functions.spacing('lg');
+  border-top: 1px solid lighten(functions.color('background'), 75%);
+}
+
+.text-color {
+  &--primary {
+    color: functions.color('primary-foreground');
+  }
+
+  &--secondary {
+    color: functions.color('secondary-foreground');
+  }
+
+  &--accent {
+    color: functions.color('accent-foreground');
+  }
+}

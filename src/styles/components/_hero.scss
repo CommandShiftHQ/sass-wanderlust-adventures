@@ -1,0 +1,25 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
+.hero {
+  height: 50vh;
+  border-radius: functions.radius('lg');
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+
+  &__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: functions.gradient('fadeUp');
+  }
+}

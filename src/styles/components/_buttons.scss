@@ -1,0 +1,49 @@
+@use '../utilities/functions';
+
+.button {
+  font-weight: functions.font-weight('bold');
+  text-decoration: none;
+  border: 1px solid functions.color('foreground');
+  border-radius: functions.radius('lg');
+  padding: 8px 16px;
+  color: functions.color('foreground');
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover {
+    text-decoration: none;
+    background: functions.color('foreground');
+    color: functions.color('background');
+  }
+
+  &--primary {
+    border-color: functions.color('primary-foreground');
+    color: functions.color('primary-foreground');
+
+    &:hover {
+      background: functions.color('primary-foreground');
+      color: functions.color('background');
+    }
+  }
+
+  &--secondary {
+    border-color: functions.color('secondary-foreground');
+    color: functions.color('secondary-foreground');
+
+    &:hover {
+      background: functions.color('secondary-foreground');
+      color: functions.color('background');
+    }
+  }
+
+  &--accent {
+    border-color: functions.color('accent-foreground');
+    color: functions.color('accent-foreground');
+
+    &:hover {
+      background: functions.color('accent-foreground');
+      color: functions.color('background');
+    }
+  }
+}

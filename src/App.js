@@ -25,39 +25,45 @@ function App() {
       </header>
       <main>
         {/* HERO */}
-        <section>
-          <div></div>
-          <img src='./images/hero.jpg' alt='Scenic Canadian Landscape' />
+        <section className='hero'>
+          <div className='hero__overlay'></div>
+          <img
+            className='hero__image'
+            src='./images/hero.jpg'
+            alt='Scenic Canadian Landscape'
+          />
         </section>
         {/* OVERVIEW SECTION */}
-        <section>
-          <div>
-            <h1>
+        <section className='overview'>
+          <div className='overview--left'>
+            <h1 className='overview__title'>
               Canada<span>North America</span>
             </h1>
-            <p>
+            <p className='overview__description'>
               Canada is more than its hulking-mountain, craggy-coast good looks:
               it also cooks extraordinary meals, rocks cool culture, and unfurls
               wild, moose-spotting road trips.
             </p>
           </div>
-          <div>
-            <h2>Start planning your trip</h2>
-            <div>
-              <div>
-                <div>
+          <div className='overview--right'>
+            <h2 className='overview__card-group-title'>
+              Start planning your trip
+            </h2>
+            <div className='overview__card-group'>
+              <div className='card card--bg-primary card--small'>
+                <div className='card__header'>
                   <Calendar />
                 </div>
-                <div>
+                <div className='card__footer'>
                   <h5>Best Time to Visit</h5>
                   <ArrowR />
                 </div>
               </div>
-              <div>
-                <div>
+              <div className='card card--bg-secondary card--small'>
+                <div className='card__header'>
                   <Trophy />
                 </div>
-                <div>
+                <div className='card__footer'>
                   <h5>Best Places to Visit</h5>
                   <ArrowR />
                 </div>
@@ -67,61 +73,71 @@ function App() {
         </section>
         <hr />
         {/* FEATURED CARDS */}
-        <section>
-          <h2>01 / Top Sights & Places</h2>
-          <h3>
-            Unmissable <span>sights</span> for your itinerary
+        <section className='featured-strip'>
+          <h2 className='section-title'>01 / Top Sights & Places</h2>
+          <h3 className='featured-strip__title'>
+            Unmissable <span className='text-color--secondary'>sights</span> for
+            your itinerary
           </h3>
-          <div>
+          <div className='featured-strip__card-list'>
             {topSightsData.map((topSight) => (
-              <div>
+              <div className='card card--bg-img'>
                 <img src={topSight.image.src} alt={topSight.image.alt} />
-                <div>
+                <div className='card__footer'>
                   <h5>{topSight.title}</h5>
                   <p>{topSight.subtitle}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div>
-            <a href=''>Discover More Places</a>
+          <div className='featured-strip__footer'>
+            <a href='' className='button button--secondary'>
+              Discover More Places
+            </a>
           </div>
         </section>
         {/* CTA BANNER */}
-        <section>
-          <h2>02 / Guidebooks</h2>
-          <div>
-            <h3>Purchase our award-winning guidebooks</h3>
-            <p>
+        <section className='cta-banner'>
+          <h2 className='section-title'>02 / Guidebooks</h2>
+          <div className='cta-banner__content'>
+            <h3 className='cta-banner__title'>
+              Purchase our award-winning guidebooks
+            </h3>
+            <p className='cta-banner__description'>
               Get to the heart of Canada with one of our in-depth, award-winning
               guidebooks, covering maps, itineraries, and expert guidance.
             </p>
-            <a href=''>Shop Our Guidebooks</a>
+            <a href='' className='button button--accent'>
+              Shop Our Guidebooks
+            </a>
           </div>
         </section>
         {/* FEATURED ARTICLES */}
-        <section>
-          <h2>03 / Articles</h2>
-          <h3>
-            Latest <span>stories</span> from Canada
+        <section className='featured-strip'>
+          <h2 className='section-title'>03 / Articles</h2>
+          <h3 className='featured-strip__title'>
+            Latest <span className='text-color--primary'>stories</span> from
+            Canada
           </h3>
-          <div>
+          <div className='featured-strip__card-list'>
             {blogCardData.map((blogCard) => (
-              <div>
-                <div>
+              <div className='card card--blog'>
+                <div className='card__image-wrapper'>
                   <img src={blogCard.image.src} alt={blogCard.image.alt} />
                 </div>
-                <div>
-                  <p>{blogCard.tag}</p>
-                  <h5>{blogCard.title}</h5>
-                  <p>{blogCard.date}</p>
-                  <p>{blogCard.overview}</p>
+                <div className='blog-summary'>
+                  <p className='blog-summary__tag'>{blogCard.tag}</p>
+                  <h5 className='blog-summary__title'>{blogCard.title}</h5>
+                  <p className='blog-summary__date'>{blogCard.date}</p>
+                  <p className='blog-summary__overview'>{blogCard.overview}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div>
-            <a href=''>Discover More Places</a>
+          <div className='featured-strip__footer'>
+            <a href='' className='button button--primary'>
+              Discover More Places
+            </a>
           </div>
         </section>
       </main>

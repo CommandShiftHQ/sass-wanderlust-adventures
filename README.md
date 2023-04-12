@@ -42,6 +42,6 @@ Layouts have been created, ready to start adding components and their styles.
 
 The app in it's final state, layouts and components are styled. Variables can be tweaked to change the look and feel of the app.
 
-### Challenge
+## Challenge
 
 The app in it's current state isn't very responsive, this is bad!! Have a go at using what you've learnt so far to make the app responsive. Remember to use the breakpoint mixin, good luck!

@@ -1,4 +1,6 @@
 # Wanderlust Adventures
+![Screenshot 2023-04-12 at 15 11 16](https://user-images.githubusercontent.com/8614191/231484580-4b694547-5f3c-4388-8308-40394662e4b3.png)
+
 
 An example app, heavily inspired by Lonley Planet, to demonstrate some of the capabilites of Sass.
 

@@ -1,0 +1,18 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: functions.spacing('lg') functions.spacing('md');
+  align-items: center;
+
+  &__logo {
+    margin-bottom: functions.spacing('xs');
+  }
+}

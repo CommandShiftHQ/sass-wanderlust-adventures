@@ -1,0 +1,20 @@
+@use '../utilities/functions';
+
+.blog-summary {
+  &__tag {
+    font-weight: functions.font-weight('black');
+    color: lighten(functions.color('foreground'), 30%);
+    margin-bottom: functions.spacing('xs');
+  }
+
+  &__title {
+    font-weight: functions.font-weight('black');
+    margin-bottom: functions.spacing('xs');
+  }
+
+  &__date {
+    font-weight: functions.font-weight('bold');
+    color: lighten(functions.color('foreground'), 40%);
+    margin-bottom: functions.spacing('sm');
+  }
+}

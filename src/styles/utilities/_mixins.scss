@@ -1,0 +1,97 @@
+@use './variables';
+@use './functions';
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin breakpoint($screen-size) {
+  $raw-query: map-get(variables.$breakpoints, $screen-size);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 500;
+
+  @include breakpoint('large') {
+    font-size: 88px;
+  }
+}
+
+@mixin h2 {
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @include breakpoint('large') {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@mixin h3 {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 300;
+
+  @include breakpoint('large') {
+    font-size: 64px;
+    line-height: 1.3;
+  }
+}
+
+@mixin h4 {
+  font-size: 24px;
+  line-height: 1.3;
+
+  @include breakpoint('large') {
+    font-size: 32px;
+  }
+}
+
+@mixin h5 {
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include breakpoint('large') {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+@mixin text-base {
+  font-family: variables.$font-family;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: functions.color('foreground');
+}
+
+@mixin text-large {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: functions.font-weight('bold');
+
+  @include breakpoint('large') {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,23 @@
+@use '../utilities/functions';
+
+.featured-strip {
+  padding: functions.spacing('xl') functions.spacing('lg');
+  max-width: functions.max-width('lg');
+  margin: 0 auto;
+
+  &__title {
+    margin-bottom: functions.spacing('lg');
+  }
+
+  &__card-list {
+    display: flex;
+    gap: 20px;
+    margin-bottom: functions.spacing('lg');
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: functions.spacing('md');
+  }
+}

@@ -1,0 +1,114 @@
+@use '../utilities/functions';
+
+.card {
+  color: functions.color('foreground');
+  border-radius: functions.radius('md');
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  flex: 1;
+
+  &__header {
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &--small {
+    height: 224px;
+    flex: 1;
+  }
+
+  &--bg-primary {
+    color: functions.color('primary-foreground');
+    background: functions.color('primary-background');
+  }
+
+  &--bg-secondary {
+    color: functions.color('secondary-foreground');
+    background: functions.color('secondary-background');
+  }
+
+  &--bg-img {
+    position: relative;
+    height: 428px;
+    flex: 1;
+    overflow: hidden;
+    color: functions.color('white');
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background: functions.gradient('fadeDown');
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .card__footer {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+  }
+
+  &--blog {
+    .card__image-wrapper {
+      height: 400px;
+      overflow: hidden;
+      border-radius: functions.radius('md');
+      margin-bottom: functions.spacing('sm');
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

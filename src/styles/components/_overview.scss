@@ -1,0 +1,48 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+.overview {
+  display: flex;
+  padding: functions.spacing('2xl') functions.spacing('xl');
+  max-width: functions.max-width('lg');
+  margin: 0 auto;
+  justify-content: space-between;
+
+  &--left {
+    width: 50%;
+  }
+
+  &--right {
+    width: 40%;
+  }
+
+  &__title {
+    font-weight: functions.font-weight('black');
+    margin-bottom: functions.spacing('sm');
+    color: functions.color('accent-foreground');
+
+    span {
+      margin-left: 8px;
+      @include mixins.h4;
+      font-weight: functions.font-weight('bold');
+      color: functions.color('foreground');
+    }
+  }
+
+  &__description {
+    @include mixins.text-large;
+    max-width: 600px;
+    margin-left: 8px;
+  }
+
+  &__card-group-title {
+    text-align: center;
+    margin-bottom: functions.spacing('sm');
+  }
+
+  &__card-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

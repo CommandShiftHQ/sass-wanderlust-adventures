@@ -3,8 +3,6 @@
 
 .cta-banner {
   padding: functions.spacing('xl') functions.spacing('md');
-  background: functions.color('accent-background');
-  color: functions.color('accent-foreground');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,5 +24,20 @@
     @include mixins.text-large;
     max-width: 560px;
     margin-bottom: functions.spacing('md');
+  }
+
+  &--primary {
+    background: functions.color('primary-background');
+    color: functions.color('primary-foreground');
+  }
+
+  &--secondary {
+    background: functions.color('secondary-background');
+    color: functions.color('secondary-foreground');
+  }
+
+  &--accent {
+    background: functions.color('accent-background');
+    color: functions.color('accent-foreground');
   }
 }
